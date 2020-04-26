@@ -1,0 +1,42 @@
+@mixin telefono{
+     @media only screen and (min-width: #{$telefono}) {
+          @content;
+      }
+}
+@mixin tablet{
+     @media only screen and (min-width: #{$tablet}) {
+          @content;
+      }
+}
+@mixin escritorio{
+     @media only screen and (min-width: #{$desktop}) {
+          @content;
+      }
+}
+
+//botones
+
+@mixin boton($color1,$color2) {
+     display: inline-block;
+     background:$color1 ;
+     text-align: center;
+     padding: 10px;
+     margin: 10px;
+     &:hover{
+          background: $color2;
+     }
+}
+@mixin descripcion($color,$position,$font) {
+     background:$color;
+     position: absolute;
+     top: 0;
+     #{$position}:-100% ;
+     width: 100%;
+     height: 100%;
+     color: #fff;
+     font-family:$font;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
