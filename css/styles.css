@@ -4,10 +4,100 @@
   font-family: "Baloo Bhai 2", cursive;
 }
 
-.header {
+.bar .menu-link {
+  text-decoration: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
+.header {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(45, 151, 26, 0.472) 15%, rgba(199, 199, 199, 0.315)), url(../../img/banner.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  background: #024959c2;
+}
+.bar .item {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bar .item:hover {
+  background: rgba(212, 209, 209, 0.459);
+}
+.bar .item i {
+  margin-right: 5px;
+}
+.bar .menu-link {
+  color: #fff;
+}
+
+.menu-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-ul-contact {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.menu-ul-contact .item:nth-child(1) {
+  order: 2;
+}
+.menu-ul-contact .item:nth-child(2) {
+  order: 3;
+  flex-basis: 100%;
+}
+.menu-ul-contact .item:nth-child(3) {
+  order: 1;
+}
+
+.logo-title {
+  font-family: "Satisfy", cursive;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-ul-contact .item:nth-child(2) {
+    flex: 0;
+  }
+
+  .bar:nth-child(2) {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto auto;
+    background: none;
+  }
+  .bar:nth-child(2) .bar-child {
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+  .logo-title {
+    text-align: left;
+  }
+}
 /*Banner*/
 
 /*# sourceMappingURL=styles.css.map */

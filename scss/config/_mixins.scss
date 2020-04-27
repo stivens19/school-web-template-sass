@@ -39,4 +39,12 @@
      justify-content: center;
      align-items: center;
 }
-
+@mixin gradiente($color1,$color2,$url) {
+     background:linear-gradient(to right, #{$color1} 15%, #{$color2}),#{$url};
+}
+@mixin imgproc {
+     background-position: center center;
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+}

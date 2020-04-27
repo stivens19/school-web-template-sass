@@ -13,11 +13,87 @@
      justify-content: center;
      width: 100%;
      height: 100%;
+     text-decoration: none;
+     
 }
 
 //Header
 .header{
+     height: 100vh;
+     @include gradiente($secundario,$cuaternario,url(../../img/banner.jpeg));
+     @include imgproc;
+}
+.bar{
      display: flex;
+     flex-direction: column;
+     background: $primario;
+     .item{
+          display: flex;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          &:hover{
+               background: $hover2;
+          }
+          i{
+               margin-right: 5px;
+          }
+     }
+     .menu-link{
+          @extend %a-menu;
+          color: #fff;
+     }
+
+}
+.menu-ul{
+     display: flex;
+     flex-direction: column;
+}
+.menu-ul-contact{
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content:$around;
+     .item:nth-child(1){
+          order: 2;
+     }
+     .item:nth-child(2){
+          order: 3;
+          flex-basis: 100%;
+     }
+     .item:nth-child(3){
+          order:1;
+     }
+}
+.logo-title{
+     font-family: $fuente-corrida;
+     color: #fff;
+     font-size: 30px;
+     text-align: center;
+}
+@include tablet{
+     .menu-ul{
+          flex-direction: row;
+          justify-content: $around;
+     }
+     .menu-ul-contact{ 
+          .item:nth-child(2){
+               flex: 0;
+          }
+     }
+     .bar:nth-child(2){
+          width: 90%;
+          flex-direction: row;
+          justify-content: $around;
+          margin: auto auto;
+          background: none;
+          .bar-child{
+               flex: 0 1 calc(50% - 1rem);
+          }
+     }
+     .logo-title{
+          text-align:left;
+     }
      
 }
 /*Banner*/
